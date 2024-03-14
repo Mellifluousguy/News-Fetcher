@@ -1,4 +1,5 @@
-*{
+/* Reset styles and global styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,26 +8,31 @@
     user-select: none;
     overflow-x: hidden;
 }
-:root{
+
+/* Root variables */
+:root {
     --violet: #7234fa;
     --bg: #dddBce;
     --dark: #222222;
     --neutral: #334464;
     --base: #312f36;
 }
+
+/* Media queries */
 @media only screen and (max-width: 1024px) {
-    #container nav{
+    /* Adjustments for smaller screens */
+    #container nav {
         display: flex;
         flex-direction: column;
         height: 22vh;
         align-items: center;
         justify-content: center;
     }
-    #container nav a{
+    #container nav a {
         width: 100%;
         text-align: center;
     }
-    #container nav .search{
+    #container nav .search {
         transform: none;
         display: flex;
         height: max-content;
@@ -34,37 +40,40 @@
     }
     #container section {
         grid-template-columns: auto auto;
-        text-align: center;
+        text-align: center; /* Align content center for smaller screens */
     }
 }
+
 @media only screen and (max-width: 600px) {
-    *{
-        text-align: center;
+    /* Adjustments for even smaller screens */
+    * {
+        text-align: center; /* Align all text center */
     }
-    #container nav{
+    #container nav {
         display: flex;
         flex-direction: column;
         height: 22vh;
         align-items: center;
         justify-content: center;
     }
-    #container nav a{
+    #container nav a {
         width: 100%;
         text-align: center;
     }
-    #container nav .search{
+    #container nav .search {
         transform: none;
         display: flex;
         height: max-content;
         width: max-content;
     }
-    #container section{
-        text-align: center;
+    #container section {
+        text-align: center; /* Align content center for smallest screens */
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 100%; /* Display articles in a single column */
     }
-
 }
+
+/* Main container styles */
 #container {
     max-width: 1024px;
     width: 100%;
@@ -77,13 +86,14 @@
     transform: translateX(-50%);
 }
 
-nav{
+/* Navigation styles */
+nav {
     width: 100%;
     display: flex;
     height: 15vh;
     background: var(--base);
 }
-nav a{
+nav a {
     font-size: 2em;
     color: #468284;
     text-decoration: none;
@@ -91,28 +101,31 @@ nav a{
     padding: 25px;
     font-weight: 600;
 }
-nav .search{
+nav .search {
     padding: 25px;
     width: 40%;
     transform: translate(120%);
 }
 
+/* Search input and button styles */
 .search input,
-.search button{
+.search button {
     padding: 8px;
     font-size: .9em;
     border: none;
     outline: none;
 }
-.search button{
+.search button {
     background: var(--violet);
     border-radius: 5px;
     color: white;
 }
-.search input{
+.search input {
     border-radius: 5px;
 }
-.dropdown{
+
+/* Dropdown styles */
+.dropdown {
     width: 100%;
     padding: 0 20px;
     height: 8vh;
@@ -120,38 +133,47 @@ nav .search{
     align-items: center;
 }
 
-section{
+/* Section styles */
+section {
     display: grid;
     margin-top: 10px;
-    grid-template-columns: 325px 325px 325px;
+    grid-template-columns: 325px 325px 325px; /* Display articles in 3 columns */
     gap: 10px;
 }
-section h3{
+
+/* Article heading styles */
+section h3 {
     color: var(--dark);
     margin: 10px 0;
 }
-section img{
+
+/* Article image styles */
+section img {
     height: 300px;
     width: 300px;
 }
 
-section p{
-    color:var(--neutral);
+/* Article content styles */
+section p {
+    color: var(--neutral);
 }
-section a{
+
+/* Article link styles */
+section a {
     color: var(--violet);
     text-decoration: none;
     font-weight: 600;
     margin: 10px 0;
 }
 
-section div:hover{
+/* Hover effect on article container */
+section div:hover {
     box-shadow: 0 0 15px gray;
 }
 
+/* Article container styles */
 section div {
     padding: 15px;
-    border-radius: 5px ;
+    border-radius: 5px;
     background: var(--bg);
-
 }
